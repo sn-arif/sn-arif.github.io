@@ -12,7 +12,7 @@ const INDUSTRY_DATA = {
     title: "Stop losing emergency calls and chasing paper job sheets",
     desc: "When a pipe bursts, homeowners call the first trustworthy business on Google. And once your technician finishes the repair, they shouldn't wait until evening to send the bill.",
     before: "Missed calls on the road, texting job addresses over WhatsApp, and forgetting to bill for small parts.",
-    after: "A 24/7 Google booking page plus a 1-tap technician app for job locations and instant customer invoices."
+    after: "A 24/7 online booking website plus a 1-tap technician app for job locations and instant customer invoices."
   },
   cleaning: {
     tag: "Commercial Cleaning",
