@@ -1,16 +1,16 @@
 :root {
   --bg: #ffffff;
-  --bg-tinted: #f8fafc;
-  --ink: #0f172a;
+  --bg-tinted: #f4f7fb;
+  --ink: #0b192c;
   --muted: #475569;
   --subtle: #64748b;
   --border: #e2e8f0;
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --emerald: #059669;
-  --emerald-soft: #ecfdf5;
+  --primary: #0f4c81;
+  --primary-hover: #0a365c;
+  --emerald: #0d9488;
+  --emerald-soft: #f0fdfa;
   --radius: 16px;
-  --shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
+  --shadow: 0 12px 36px rgba(11, 25, 44, 0.06);
 }
 
 * {
@@ -175,12 +175,12 @@ body {
   background: var(--primary);
   color: #fff;
   padding: 12px 22px;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+  box-shadow: 0 8px 20px rgba(15, 76, 129, 0.22);
 }
 
 .btn-primary:hover {
   background: var(--primary-hover);
-  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 12px 26px rgba(15, 76, 129, 0.3);
 }
 
 .btn-outline {
@@ -212,7 +212,7 @@ body {
 .glow-blue {
   width: 420px;
   height: 420px;
-  background: #93c5fd;
+  background: #bae6fd;
   top: -120px;
   left: -80px;
 }
@@ -220,7 +220,7 @@ body {
 .glow-green {
   width: 360px;
   height: 360px;
-  background: #6ee7b7;
+  background: #99f6e4;
   bottom: -100px;
   right: -60px;
 }
