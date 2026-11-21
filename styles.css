@@ -1286,6 +1286,11 @@ input[type="range"]::-webkit-slider-thumb {
   .founder-photo {
     height: 320px;
   }
+  .footer-inner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
   .line-item-inputs, .inv-meta-grid {
     grid-template-columns: 1fr;
   }
