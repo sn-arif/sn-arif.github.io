@@ -175,7 +175,7 @@ body {
   position: relative;
   background: var(--dark-bg);
   color: #fff;
-  padding: 78px 0 92px;
+  padding: 64px 0 70px;
   overflow: hidden;
 }
 
@@ -395,7 +395,7 @@ h1 {
 
 /* Sections */
 .section {
-  padding: 80px 0;
+  padding: 68px 0;
 }
 
 .bg-soft {
