@@ -1287,7 +1287,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 320px;
   }
   .footer-inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
   }
