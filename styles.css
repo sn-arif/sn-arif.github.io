@@ -616,6 +616,33 @@ h1 {
 .ba-after { background: var(--emerald-soft); border-color: #a7f3d0; }
 .ba-after span { color: var(--emerald); }
 
+/* Sample Work Cards */
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.sample-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.sample-card h3 {
+  font-size: 1.25rem;
+}
+
+.sample-card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
 /* Demo */
 .demo-tabs {
   display: flex;
@@ -1206,7 +1233,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 @media (max-width: 900px) {
-  .hero-grid, .bento-grid, .bento-split, .industry-spotlight, .demo-grid, .calc-grid, .day-grid {
+  .hero-grid, .bento-grid, .bento-split, .industry-spotlight, .demo-grid, .calc-grid, .day-grid, .sample-grid {
     grid-template-columns: 1fr;
   }
   .hero-copy {
