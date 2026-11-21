@@ -1,10 +1,7 @@
-// ==========================================
-// 1. UPDATE YOUR CONTACT DETAILS HERE
-// ==========================================
 const PROFILE_CONFIG = {
   ownerName: "Arif",
-  brandName: "Arif",
-  whatsappNumber: "8801568293044", // Country code + number, no '+' or spaces
+  brandName: "Md Arif Islam",
+  whatsappNumber: "8801568293044",
   email: "sn.arif.personal@gmail.com",
   demoCompany: "Premier Local Services"
 };
@@ -12,41 +9,37 @@ const PROFILE_CONFIG = {
 const INDUSTRY_DATA = {
   plumbing: {
     tag: "Plumbing & HVAC",
-    title: "Stop Losing Emergency Calls & Chasing Paper Job Sheets",
+    title: "Stop losing emergency calls and chasing paper job sheets",
     desc: "When a pipe bursts, homeowners call the first trustworthy business on Google. And once your technician finishes the repair, they shouldn't wait until evening to send the bill.",
-    before: "Missed calls on the road, texting job addresses over WhatsApp, and forgetting to bill extras.",
-    after: "24/7 Google booking page + 1-tap technician app for job locations & instant customer invoices."
+    before: "Missed calls on the road, texting job addresses over WhatsApp, and forgetting to bill for small parts.",
+    after: "A 24/7 Google booking page plus a 1-tap technician app for job locations and instant customer invoices."
   },
   cleaning: {
     tag: "Commercial Cleaning",
-    title: "Keep Every Crew on Schedule & Automate Recurring Billing",
-    desc: "Managing multiple office or home cleaning crews across a city gets messy fast. Give each team clear daily checklists and locations right on their phone.",
-    before: "Staff calling the office for gate codes, lost checklists, and manual end-of-month invoicing.",
-    after: "Crews see exact building access notes on their phone & clients get billed automatically."
+    title: "Keep every crew on schedule and send recurring bills on time",
+    desc: "Managing multiple office or home cleaning crews across a city gets messy fast. Give each team clear daily checklists and access notes right on their phone.",
+    before: "Staff calling the office for gate codes, lost paper checklists, and manual end-of-month invoicing.",
+    after: "Crews see building access notes on their phone and clients get billed automatically."
   },
   roofing: {
     tag: "Roofing & Renovation",
-    title: "Turn Local Searches Into High-Ticket Estimates & Projects",
-    desc: "Homeowners spending $5,000+ check your website before calling. A clean, trustworthy site + organized quote follow-up wins jobs over competitors.",
+    title: "Turn local searches into solid estimate requests",
+    desc: "Homeowners spending $5,000+ check your website before calling. A clean, trustworthy site plus organized quote follow-up wins jobs over competitors.",
     before: "Outdated or missing website, slow quote follow-ups, and scattered project photos.",
-    after: "High-trust project showcase website + organized quote & milestone tracking in one place."
+    after: "A clear project showcase website plus organized quote and milestone tracking in one place."
   },
   rental: {
     tag: "Real Estate & Car Rental",
-    title: "Instant Booking Requests & Zero Double-Bookings",
-    desc: "In fast-moving markets like Dubai, USA & UK, clients expect instant answers on WhatsApp and clean booking confirmations without back-and-forth.",
-    before: "Slow manual replies, Excel sheet conflicts, and lost leads after business hours.",
-    after: "24/7 online availability & instant WhatsApp/Email booking alerts straight to your team."
+    title: "Faster booking requests without double-bookings",
+    desc: "In fast-moving markets like Dubai, the US, and the UK, clients expect quick answers on WhatsApp and clear booking confirmations without back-and-forth.",
+    before: "Slow manual replies, spreadsheet conflicts, and lost inquiries after business hours.",
+    after: "Clear online availability and instant WhatsApp or email booking alerts straight to your team."
   }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Apply config values
   document.querySelectorAll('[data-config="brandName"]').forEach(el => {
     el.textContent = PROFILE_CONFIG.brandName;
-  });
-  document.querySelectorAll('[data-config="ownerName"]').forEach(el => {
-    el.textContent = PROFILE_CONFIG.ownerName;
   });
   document.querySelectorAll('[data-config="demoCompany"]').forEach(el => {
     el.textContent = PROFILE_CONFIG.demoCompany;
@@ -56,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const waUrl = `https://wa.me/${PROFILE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-    "Hi Arif! I saw your portfolio and would like a quick 2-minute preview for my business."
+    "Hi Arif, I saw your site and would like a quick sample for my business."
   )}`;
   document.querySelectorAll("[data-whatsapp-link]").forEach(el => {
     el.href = waUrl;
@@ -65,21 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const mailUrl = `mailto:${PROFILE_CONFIG.email}?subject=${encodeURIComponent(
-    "Quick Preview Request for My Business"
+    "Quick sample for my business"
   )}`;
   document.querySelectorAll("[data-email-link]").forEach(el => {
     el.href = mailUrl;
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Scroll Progress Bar
-  const scrollProgress = document.getElementById("scrollProgress");
-  window.addEventListener("scroll", () => {
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-    scrollProgress.style.width = `${pct}%`;
-  });
 
   // Mobile Menu
   const menuToggle = document.getElementById("menuToggle");
@@ -91,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     a.addEventListener("click", () => navLinks.classList.remove("open"));
   });
 
-  // Scroll Reveal Observer
+  // Subtle Scroll Reveal
   const revealObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -100,34 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.01, rootMargin: "80px 0px" }
+    { threshold: 0.05, rootMargin: "60px 0px" }
   );
   document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
-
-  // Animated Counters
-  const counters = document.querySelectorAll(".counter");
-  const counterObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting || entry.target.dataset.done) return;
-        entry.target.dataset.done = "1";
-        const target = parseInt(entry.target.dataset.target, 10);
-        const suffix = entry.target.dataset.suffix || "";
-        let current = 0;
-        const step = Math.max(1, Math.ceil(target / 24));
-        const timer = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          entry.target.textContent = `${current}${suffix}`;
-        }, 35);
-      });
-    },
-    { threshold: 0.4 }
-  );
-  counters.forEach(c => counterObserver.observe(c));
 
   // Industry Selector
   const indPills = document.querySelectorAll(".ind-pill");
@@ -197,12 +157,12 @@ document.addEventListener("DOMContentLoaded", () => {
     sendInvoiceBtn.disabled = true;
 
     setTimeout(() => {
-      invBadge.textContent = "Sent & Paid ✓";
+      invBadge.textContent = "Sent & Paid";
       invBadge.classList.add("paid");
-      invoiceStatus.textContent = `✓ Instant Invoice ($${total.toFixed(2)}) delivered to Sarah Jenkins via SMS & Email with 1-tap Card/Apple Pay link!`;
+      invoiceStatus.textContent = `Invoice ($${total.toFixed(2)}) sent to Sarah Jenkins by SMS and email.`;
       invoiceStatus.classList.add("sent");
       sendInvoiceBtn.disabled = false;
-    }, 450);
+    }, 400);
   });
 
   // Customer Booking Interactive Preview
@@ -214,11 +174,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const service = document.getElementById("custService").value.trim();
     const phone = document.getElementById("custPhone").value.trim();
     bookingOutput.innerHTML = `
-      <p><strong>New Google Lead Captured!</strong></p>
+      <p><strong>New Callback Request</strong></p>
       <p><strong>Customer:</strong> ${name}</p>
       <p><strong>Service:</strong> ${service}</p>
       <p><strong>Phone:</strong> ${phone}</p>
-      <p class="status-note sent">✓ Added to today's schedule &amp; owner notified instantly.</p>
+      <p class="status-note sent">Added to today's schedule and sent to your phone.</p>
     `;
   });
 });
