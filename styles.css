@@ -175,7 +175,10 @@ body {
   position: relative;
   background: var(--dark-bg);
   color: #fff;
-  padding: 64px 0 70px;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  padding: 56px 0 64px;
   overflow: hidden;
 }
 
