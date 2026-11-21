@@ -181,4 +181,68 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="status-note sent">Added to today's schedule and sent to your phone.</p>
     `;
   });
+
+  // Time & Money Saved Calculator
+  const staffRange = document.getElementById("staffRange");
+  const jobsRange = document.getElementById("jobsRange");
+  const staffVal = document.getElementById("staffVal");
+  const jobsVal = document.getElementById("jobsVal");
+  const weeklyHours = document.getElementById("weeklyHours");
+  const monthlyHours = document.getElementById("monthlyHours");
+  const monthlyValue = document.getElementById("monthlyValue");
+
+  function updateCalculator() {
+    const staff = parseInt(staffRange.value, 10);
+    const jobs = parseInt(jobsRange.value, 10);
+    staffVal.textContent = `${staff} ${staff === 1 ? "person" : "staff"}`;
+    jobsVal.textContent = `${jobs} jobs`;
+
+    const wkHrs = +(jobs * 0.33 + staff * 0.7).toFixed(1);
+    const moHrs = Math.round(wkHrs * 4);
+    const moVal = moHrs * 35;
+
+    weeklyHours.textContent = `~${wkHrs} hrs/wk`;
+    monthlyHours.textContent = `~${moHrs} hrs/mo`;
+    monthlyValue.textContent = `~$${moVal.toLocaleString()}/mo`;
+  }
+
+  staffRange.addEventListener("input", updateCalculator);
+  jobsRange.addEventListener("input", updateCalculator);
+  updateCalculator();
+
+  // Day in the Life Comparison
+  const DAY_DATA = {
+    before: [
+      { time: "8:00 AM", title: "Morning Dispatch", text: "Texting 4 different staff members addresses, gate codes, and customer phone numbers one by one on WhatsApp." },
+      { time: "1:30 PM", title: "On the Road", text: "You miss 2 calls while driving or on a job. Those callers don't leave a voicemail—they call your competitor." },
+      { time: "5:00 PM", title: "End of Shift", text: "Staff drop off crumpled paper job notes or forget to mention the extra parts they used on site." },
+      { time: "9:30 PM", title: "Late-Night Admin", text: "Instead of resting with family, you're sitting at a laptop typing out invoices and chasing payments." }
+    ],
+    after: [
+      { time: "8:00 AM", title: "Morning Dispatch", text: "Your crew opens one simple app on their phone and sees all today's addresses, gate codes, and notes." },
+      { time: "1:30 PM", title: "On the Road", text: "Even when you can't pick up, your website captures quote requests and texts you the customer's details." },
+      { time: "5:00 PM", title: "End of Shift", text: "Technicians tap 'Complete Job' on site—the customer gets an itemized invoice by SMS and email right away." },
+      { time: "9:30 PM", title: "Evening Off", text: "Every job and payment is already logged. Your evening is actually yours." }
+    ]
+  };
+
+  const dayBtns = document.querySelectorAll(".day-btn");
+  const dayGrid = document.getElementById("dayGrid");
+  dayBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      dayBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const mode = btn.dataset.day;
+      const cls = mode === "before" ? "is-before" : "is-after";
+      dayGrid.innerHTML = DAY_DATA[mode]
+        .map(item => `
+          <div class="day-card ${cls}">
+            <span class="day-time">${item.time}</span>
+            <h4>${item.title}</h4>
+            <p>${item.text}</p>
+          </div>
+        `)
+        .join("");
+    });
+  });
 });

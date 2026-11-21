@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <div class="dot-grid-bg" aria-hidden="true"></div>
@@ -336,6 +336,100 @@
 
     <div class="section-divider"><span class="divider-node">✦</span></div>
 
+    <!-- TIME & MONEY SAVED CALCULATOR -->
+    <section id="calculator" class="section bg-tinted">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">See Your Numbers</span>
+          <h2>How many hours is manual work costing you?</h2>
+          <p>Move the sliders below to see how much admin time your team can get back every month.</p>
+        </div>
+
+        <div class="calc-grid reveal">
+          <div class="calc-inputs">
+            <div class="slider-group">
+              <div class="slider-top">
+                <label for="staffRange">Field Staff / Technicians</label>
+                <strong id="staffVal">4 staff</strong>
+              </div>
+              <input type="range" id="staffRange" min="1" max="25" value="4" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-top">
+                <label for="jobsRange">Jobs Completed Per Week</label>
+                <strong id="jobsVal">20 jobs</strong>
+              </div>
+              <input type="range" id="jobsRange" min="5" max="100" step="5" value="20" />
+            </div>
+
+            <p class="calc-footnote">
+              Based on typical time spent texting addresses, chasing paper job sheets, and manually writing invoices (~20 mins per job).
+            </p>
+          </div>
+
+          <div class="calc-results">
+            <div class="calc-stat">
+              <span>Admin Time Saved Weekly</span>
+              <strong id="weeklyHours">~9.5 hrs/wk</strong>
+            </div>
+            <div class="calc-stat">
+              <span>Hours Saved Every Month</span>
+              <strong id="monthlyHours">~38 hrs/mo</strong>
+            </div>
+            <div class="calc-stat highlight-stat">
+              <span>Estimated Monthly Value Recovered</span>
+              <strong id="monthlyValue">~$1,330/mo</strong>
+            </div>
+            <a href="#" class="btn btn-primary" data-whatsapp-link>Save these hours — message me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><span class="divider-node">✦</span></div>
+
+    <!-- DAY IN THE LIFE COMPARISON -->
+    <section id="day-compare" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Before vs. After</span>
+          <h2>A normal workday in your business</h2>
+          <p>Toggle below to compare how your day feels without a system vs. with a simple setup.</p>
+        </div>
+
+        <div class="day-toggle-wrap">
+          <button class="day-btn active" data-day="before">Without a System</button>
+          <button class="day-btn" data-day="after">With Your Custom Setup</button>
+        </div>
+
+        <div class="day-grid" id="dayGrid">
+          <div class="day-card is-before">
+            <span class="day-time">8:00 AM</span>
+            <h4>Morning Dispatch</h4>
+            <p>Texting 4 different staff members addresses, gate codes, and customer phone numbers one by one on WhatsApp.</p>
+          </div>
+          <div class="day-card is-before">
+            <span class="day-time">1:30 PM</span>
+            <h4>On the Road</h4>
+            <p>You miss 2 calls while driving or on a job. Those callers don't leave a voicemail—they call your competitor.</p>
+          </div>
+          <div class="day-card is-before">
+            <span class="day-time">5:00 PM</span>
+            <h4>End of Shift</h4>
+            <p>Staff drop off crumpled paper job notes or forget to mention the extra parts they used on site.</p>
+          </div>
+          <div class="day-card is-before">
+            <span class="day-time">9:30 PM</span>
+            <h4>Late-Night Admin</h4>
+            <p>Instead of resting with family, you're sitting at a laptop typing out invoices and chasing payments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><span class="divider-node">✦</span></div>
+
     <!-- PROCESS TIMELINE -->
     <section id="process" class="section bg-tinted">
       <div class="container">
@@ -370,6 +464,37 @@
       </div>
     </section>
 
+    <div class="section-divider"><span class="divider-node">✦</span></div>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Common Questions</span>
+          <h2>Quick answers before we chat</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>My field staff aren't tech-savvy. Can they actually use this?</summary>
+            <p>Yes. I build everything specifically for busy tradespeople—big buttons, plain English, zero clutter. If your staff can send a WhatsApp message, they can use the job and invoice screen in under 10 seconds.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I see a sample for my business before paying anything?</summary>
+            <p>Yes. Just message me your business name and what takes up most of your admin time. I'll put together a quick, working preview with your branding so you can test it first.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does it take to get everything live?</summary>
+            <p>A clean business website usually takes 3 to 5 days. A custom field-staff job and invoice app typically takes 1 to 2 weeks, launched smoothly without interrupting your current jobs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will I be locked into expensive monthly agency fees?</summary>
+            <p>No. You own your website and setup outright, with simple, transparent pricing and direct WhatsApp support whenever you need tweaks.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section contact-section">
       <div class="container">
@@ -400,6 +525,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
