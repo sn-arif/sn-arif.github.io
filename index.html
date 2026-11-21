@@ -3,121 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arif — Websites &amp; Field Apps for Service Businesses</title>
-  <meta name="description" content="I help plumbing, cleaning, roofing, and rental businesses get more local calls and handle job tracking &amp; invoicing without the paperwork." />
+  <title>Md Arif Islam — Websites &amp; Field Apps for Service Businesses</title>
+  <meta name="description" content="Helping plumbing, cleaning, roofing, renovation, real estate, and car rental owners get more local calls and manage jobs &amp; instant invoices without paperwork." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
+  <div class="dot-grid-bg" aria-hidden="true"></div>
+
+  <!-- FLOATING GLASS PILL NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#" class="brand">
+        <span class="brand-dot"></span>
         <span class="brand-name" data-config="brandName">Md Arif Islam</span>
       </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#work">What I Build</a>
+
+      <nav class="nav-pill" id="navLinks">
+        <a href="#problems">Problems Solved</a>
         <a href="#industries">By Trade</a>
-        <a href="#demo">Try a Demo</a>
+        <a href="#demo">Live Demo</a>
         <a href="#process">How I Work</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+
+      <div class="nav-right">
+        <a href="#contact" class="btn btn-dark btn-sm">Get Free Sample</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-glow glow-blue" aria-hidden="true"></div>
+      <div class="hero-glow glow-green" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker">Working with service businesses in the US, UK, Canada, Australia &amp; Dubai</p>
+          <div class="status-pill">
+            <span class="live-dot"></span>
+            Available for new projects • US, UK, Canada, Australia &amp; Dubai
+          </div>
+
           <h1>
-            Simple websites and job-tracking apps that help your crew get paid faster.
+            Simple websites &amp; field apps that help your crew
+            <span class="highlight-italic">get paid faster.</span>
           </h1>
+
           <p class="hero-sub">
             Hi, I'm Arif. Most trade and service owners I talk to are tired of missing calls while on a job,
-            texting addresses to staff over WhatsApp, and writing invoices late at night. I build straightforward
-            tools that fix that, without complicated software your team hates using.
+            texting addresses over WhatsApp, and writing invoices at 9 PM. I build straightforward websites
+            and job-tracking tools that fix that—without complicated software.
           </p>
 
           <div class="hero-actions">
-            <a href="#" class="btn btn-primary" data-whatsapp-link>
+            <a href="#" class="btn btn-primary btn-lg" data-whatsapp-link>
               Message me on WhatsApp
             </a>
-            <a href="#demo" class="btn btn-secondary">
-              Try the live invoice demo
+            <a href="#demo" class="btn btn-outline btn-lg">
+              Try Interactive Demo
             </a>
           </div>
 
-          <div class="hero-note">
-            <span>Direct 1-on-1 work, no agency middlemen.</span>
-            <span>Free sample mockup before you pay anything.</span>
+          <div class="hero-proof">
+            <span>Direct 1-on-1 work</span>
+            <span class="sep">•</span>
+            <span>Free custom sample before you pay</span>
+            <span class="sep">•</span>
+            <span>Zero tech jargon</span>
           </div>
         </div>
 
         <div class="hero-visual">
-          <figure class="portrait-card">
+          <div class="studio-card">
             <img src="Arif_dev.jpeg" alt="Md Arif Islam" class="founder-photo" />
-            <figcaption class="portrait-caption">
-              <strong>Md Arif Islam</strong>
-              <span>Websites &amp; Field Operations Tools</span>
-            </figcaption>
-          </figure>
+            <div class="studio-card-footer">
+              <div>
+                <strong>Md Arif Islam</strong>
+                <span>Websites &amp; Field Operations Systems</span>
+              </div>
+              <a href="#contact" class="mini-link">Say hello &rarr;</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- WHAT I BUILD -->
-    <section id="work" class="section border-top">
+    <div class="section-divider"><span class="divider-node">✦</span></div>
+
+    <!-- 5 REAL BUYER PROBLEMS & SOLUTIONS (BENTO GRID) -->
+    <section id="problems" class="section">
       <div class="container">
-        <div class="section-head">
-          <p class="section-label">What I actually build</p>
-          <h2>Two practical things that save you time every week</h2>
-          <p>No bloated dashboards or features you will never open. Just what helps you book jobs and collect payment.</p>
+        <div class="section-head reveal">
+          <span class="eyebrow">5 Everyday Headaches Fixed</span>
+          <h2>The exact problems I solve for service owners</h2>
+          <p>Every tool I build is designed around real bottlenecks in plumbing, cleaning, roofing, renovation, and rental teams.</p>
         </div>
 
-        <div class="cards-2">
-          <article class="clean-card reveal">
-            <span class="card-index">01 / Getting Calls</span>
-            <h3>A clean website that makes your phone ring</h3>
-            <p>
-              When someone in your city searches for a plumber, cleaner, or roofer, they call the company that looks
-              established and easy to reach. If you don't have a site, or yours is hard to read on a phone, those calls go elsewhere.
-            </p>
-            <ul class="plain-list">
-              <li>Click-to-call and WhatsApp buttons right at the top</li>
-              <li>Your real reviews, service areas, and photos clearly laid out</li>
-              <li>Fast loading on mobile data when customers are in a hurry</li>
-            </ul>
+        <div class="bento-grid">
+          <article class="bento-card reveal">
+            <div class="bento-top">
+              <span class="bento-num">01</span>
+              <span class="bento-tag">Missed Calls</span>
+            </div>
+            <h3>Missing customer calls while you're on a job</h3>
+            <p class="problem-line"><strong>The problem:</strong> When you're driving or on-site and miss a call, that customer calls the next business on Google.</p>
+            <p class="solution-line"><strong>The fix:</strong> A fast callback &amp; WhatsApp quote form on your website that captures the customer's name, number, and issue immediately.</p>
           </article>
 
-          <article class="clean-card reveal delay-1">
-            <span class="card-index">02 / Field Crew &amp; Billing</span>
-            <h3>A simple phone app for job locations &amp; instant bills</h3>
-            <p>
-              Your technicians shouldn't have to call the office for gate codes or bring back crumpled paper receipts.
-              I set up a lightweight app where your team sees today's jobs and sends the bill before driving away.
-            </p>
-            <ul class="plain-list">
-              <li>Crew sees customer address, notes, and arrival time on their phone</li>
-              <li>Send an itemized invoice by SMS or email in one tap</li>
-              <li>You see every completed job and payment in one place</li>
-            </ul>
+          <article class="bento-card reveal delay-1">
+            <div class="bento-top">
+              <span class="bento-num">02</span>
+              <span class="bento-tag">Staff Dispatch</span>
+            </div>
+            <h3>Texting job addresses &amp; gate codes over WhatsApp</h3>
+            <p class="problem-line"><strong>The problem:</strong> Spending every morning messaging staff where to go, leading to wrong addresses and constant phone calls.</p>
+            <p class="solution-line"><strong>The fix:</strong> One simple phone view where your crew sees today's job list, Google Maps directions, and customer notes in one tap.</p>
+          </article>
+
+          <article class="bento-card reveal delay-2">
+            <div class="bento-top">
+              <span class="bento-num">03</span>
+              <span class="bento-tag">Late Billing</span>
+            </div>
+            <h3>Writing invoices at 9 PM &amp; forgetting small parts</h3>
+            <p class="problem-line"><strong>The problem:</strong> Paper job slips get lost, invoices go out days late, and extra materials often never get billed.</p>
+            <p class="solution-line"><strong>The fix:</strong> Technicians enter labor + parts on their phone and send a clean, itemized bill to the customer before leaving the driveway.</p>
+          </article>
+
+          <article class="bento-card bento-wide reveal">
+            <div class="bento-split">
+              <div>
+                <div class="bento-top">
+                  <span class="bento-num">04</span>
+                  <span class="bento-tag">Online Trust</span>
+                </div>
+                <h3>No website—or a site that looks broken on phones</h3>
+                <p class="problem-line"><strong>The problem:</strong> High-budget customers check your website before calling. If you don't have one, they assume you're too small or unreliable.</p>
+                <p class="solution-line"><strong>The fix:</strong> A crisp, mobile-first website highlighting your services, reviews, and click-to-call button so local searches turn into real calls.</p>
+              </div>
+              <div class="bento-mini-ui">
+                <div class="ui-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                <div class="ui-row"><span>Mobile Speed</span><strong>Fast</strong></div>
+                <div class="ui-row"><span>Click-to-Call</span><strong>Front &amp; Center</strong></div>
+                <div class="ui-row"><span>Google Reviews</span><strong>Highlighted</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bento-card reveal delay-1">
+            <div class="bento-top">
+              <span class="bento-num">05</span>
+              <span class="bento-tag">Owner Clarity</span>
+            </div>
+            <h3>Zero end-of-day visibility on jobs &amp; payments</h3>
+            <p class="problem-line"><strong>The problem:</strong> Not knowing which crew finished, who paid, and which invoices are still pending.</p>
+            <p class="solution-line"><strong>The fix:</strong> A clean owner summary showing every scheduled, in-progress, and paid job at a glance.</p>
           </article>
         </div>
       </div>
     </section>
+
+    <div class="section-divider"><span class="divider-node">✦</span></div>
 
     <!-- BY TRADE -->
-    <section id="industries" class="section bg-warm border-top">
+    <section id="industries" class="section bg-tinted">
       <div class="container">
         <div class="section-head">
-          <p class="section-label">Tailored to your trade</p>
-          <h2>Pick your business type to see how it fits</h2>
+          <span class="eyebrow">Tailored to Your Trade</span>
+          <h2>See how it works for your exact business</h2>
         </div>
 
         <div class="industry-pills" id="industryPills">
@@ -138,11 +197,11 @@
           </div>
           <div class="spotlight-right">
             <div class="ba-box ba-before">
-              <span>What usually happens</span>
+              <span>Without a system</span>
               <p id="indBefore">Missed calls on the road, texting job addresses over WhatsApp, and forgetting to bill for small parts.</p>
             </div>
             <div class="ba-box ba-after">
-              <span>With a simple setup</span>
+              <span>With your custom setup</span>
               <p id="indAfter">A 24/7 online booking website plus a 1-tap technician app for job locations and instant customer invoices.</p>
             </div>
           </div>
@@ -150,24 +209,26 @@
       </div>
     </section>
 
+    <div class="section-divider"><span class="divider-node">✦</span></div>
+
     <!-- INTERACTIVE DEMO -->
-    <section id="demo" class="section border-top">
+    <section id="demo" class="section">
       <div class="container">
-        <div class="section-head">
-          <p class="section-label">Interactive preview</p>
-          <h2>Try it yourself right here</h2>
-          <p>Click around below to see what your staff and customers actually experience.</p>
+        <div class="section-head reveal">
+          <span class="eyebrow">Interactive Preview</span>
+          <h2>Test the staff app &amp; booking flow right here</h2>
+          <p>Click around below to see what your field crew and customers actually experience.</p>
         </div>
 
         <div class="demo-tabs">
-          <button class="tab-btn active" data-tab="staff">Field Staff &amp; Invoice App</button>
-          <button class="tab-btn" data-tab="booking">Customer Booking Form</button>
+          <button class="tab-btn active" data-tab="staff">1. Field Staff &amp; Instant Invoice</button>
+          <button class="tab-btn" data-tab="booking">2. Customer Booking Form</button>
         </div>
 
         <div class="demo-panel active" id="tab-staff">
           <div class="demo-grid">
             <div class="demo-card staff-card">
-              <span class="demo-label">What your technician sees</span>
+              <span class="demo-label">Technician Phone View</span>
               <h4>Job #1042: Emergency Drain Clearing</h4>
               <div class="job-meta">
                 <div><strong>Customer:</strong> Sarah Jenkins</div>
@@ -196,7 +257,7 @@
             <div class="demo-card invoice-card" id="invoicePreview">
               <div class="inv-top-bar">
                 <div>
-                  <span class="demo-label">What your customer receives</span>
+                  <span class="demo-label">Customer Receives Instantly</span>
                   <h4>Invoice #INV-1042</h4>
                 </div>
                 <span class="inv-badge" id="invBadge">Draft</span>
@@ -243,7 +304,7 @@
               </div>
 
               <p id="invoiceStatus" class="status-note">
-                Change the numbers on the left and click "Complete Job &amp; Send Invoice" to test it.
+                Adjust amounts on the left and click "Complete Job &amp; Send Invoice" to test instant delivery.
               </p>
             </div>
           </div>
@@ -252,8 +313,8 @@
         <div class="demo-panel" id="tab-booking">
           <div class="demo-grid">
             <div class="demo-card">
-              <span class="demo-label">What your website visitor sees</span>
-              <h4>Request a Callback or Quote</h4>
+              <span class="demo-label">Website Visitor View</span>
+              <h4>Request a Fast Callback or Quote</h4>
               <form id="demoBookingForm" class="mini-form">
                 <input type="text" id="custName" placeholder="Customer Name (e.g. John Miller)" required />
                 <input type="text" id="custService" placeholder="Service Needed (e.g. Roof Leak Repair)" required />
@@ -263,7 +324,7 @@
             </div>
 
             <div class="demo-card">
-              <span class="demo-label">What lands in your schedule</span>
+              <span class="demo-label">Owner Schedule View</span>
               <div id="bookingOutput" class="booking-output">
                 <p>Fill out the form on the left and click <strong>Request Callback</strong> to see how every website visitor turns into an organized lead.</p>
               </div>
@@ -273,48 +334,58 @@
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="section bg-warm border-top">
+    <div class="section-divider"><span class="divider-node">✦</span></div>
+
+    <!-- PROCESS TIMELINE -->
+    <section id="process" class="section bg-tinted">
       <div class="container">
-        <div class="section-head">
-          <p class="section-label">How I work</p>
-          <h2>Straightforward from day one</h2>
+        <div class="section-head reveal">
+          <span class="eyebrow">Simple Process</span>
+          <h2>How we go from idea to live system</h2>
         </div>
 
-        <div class="cards-3">
-          <div class="step-card reveal">
-            <span class="step-num">1.</span>
-            <h3>A quick 10-minute chat</h3>
-            <p>Tell me how you currently handle bookings, crew schedules, and invoices, and what is taking up too much of your week.</p>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-node">1</div>
+            <div class="timeline-content">
+              <h3>A quick 10-minute chat</h3>
+              <p>Tell me how you currently handle bookings, crew schedules, and invoices, and what is eating up your week.</p>
+            </div>
           </div>
-          <div class="step-card reveal delay-1">
-            <span class="step-num">2.</span>
-            <h3>I build a free sample first</h3>
-            <p>I put together a working preview with your business name and services so you can see how it feels before deciding anything.</p>
+          <div class="timeline-item reveal delay-1">
+            <div class="timeline-node">2</div>
+            <div class="timeline-content">
+              <h3>I build a free sample for your business first</h3>
+              <p>I put together a working preview with your business name and services so you can see how it feels before committing.</p>
+            </div>
           </div>
-          <div class="step-card reveal delay-2">
-            <span class="step-num">3.</span>
-            <h3>Launch without disrupting your jobs</h3>
-            <p>Once you're happy with it, we go live smoothly and I stay available on WhatsApp whenever your team needs changes.</p>
+          <div class="timeline-item reveal delay-2">
+            <div class="timeline-node">3</div>
+            <div class="timeline-content">
+              <h3>Smooth launch &amp; ongoing WhatsApp support</h3>
+              <p>Once you're happy with it, we launch with zero disruption to your daily jobs, and I stay a message away whenever you need updates.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section contact-section border-top">
-      <div class="container contact-box reveal">
-        <img src="Arif_dev.jpeg" alt="Md Arif Islam" class="profile-avatar" />
-        <p class="section-label">Get in touch</p>
-        <h2>Want me to put together a quick sample for your business?</h2>
-        <p class="contact-sub">
-          Send me your business name and what takes up most of your admin time. I'll reply personally with a quick preview built around your team.
-        </p>
-        <div class="contact-actions">
-          <a href="#" class="btn btn-primary" data-whatsapp-link>Message me on WhatsApp</a>
-          <a href="#" class="btn btn-secondary" data-email-link>Send an Email</a>
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-card reveal">
+          <img src="Arif_dev.jpeg" alt="Md Arif Islam" class="profile-avatar" />
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Want a free 2-minute sample built for your business?</h2>
+          <p class="contact-sub">
+            Message me your business name and what takes up most of your admin time. I'll reply personally with a quick preview tailored to your team.
+          </p>
+          <div class="contact-actions">
+            <a href="#" class="btn btn-primary btn-lg" data-whatsapp-link>Message me on WhatsApp</a>
+            <a href="#" class="btn btn-outline btn-lg" data-email-link>Send an Email</a>
+          </div>
+          <p class="contact-meta">Direct email: <a href="#" data-email-link><span data-config="emailText">sn.arif.personal@gmail.com</span></a></p>
         </div>
-        <p class="contact-meta">Or email directly at <a href="#" data-email-link><span data-config="emailText">sn.arif.personal@gmail.com</span></a></p>
       </div>
     </section>
   </main>
@@ -322,10 +393,13 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> <span data-config="brandName">Md Arif Islam</span></p>
-      <p>Websites &amp; Field Apps for Service Businesses</p>
+      <div class="footer-status">
+        <span class="live-dot"></span>
+        <span>Available for new projects</span>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
